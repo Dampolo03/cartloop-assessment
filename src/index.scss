@@ -1,0 +1,402 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif !important;
+}
+
+$color-grey: #808080;
+$color-light-grey: #f0f0f0;
+$color-orange: #ff6600;
+$color-white: #ffffff;
+
+@mixin mediumScreen {
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin smallScreen {
+  @media only screen and (max-width: 768.9px) {
+    @content;
+  }
+}
+
+html,
+body,
+#root,
+.App {
+  height: 100%;
+}
+
+body {
+  margin: 0 !important;
+  padding: 8px;
+}
+
+.homepage-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 4fr 1fr;
+  gap: 1rem;
+  height: 100%;
+
+  @include mediumScreen {
+    display: grid;
+    grid-template-rows: 5fr 1fr 1fr;
+    grid-template-columns: none;
+    gap: 1rem;
+  }
+
+  @include smallScreen {
+    display: grid;
+    grid-template-rows: 5fr 1fr 1fr;
+    grid-template-columns: none;
+    gap: 1rem;
+  }
+}
+
+.macros-closed {
+  @include mediumScreen {
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+    grid-template-columns: none;
+    gap: 1rem;
+  }
+
+  @include smallScreen {
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+    grid-template-columns: none;
+    gap: 1rem;
+  }
+}
+
+.macros-container {
+  grid-row: span 2;
+
+  @include mediumScreen {
+    grid-column: span 1;
+    grid-row: unset;
+  }
+
+  @include smallScreen {
+    grid-column: span 1;
+    grid-row: unset;
+  }
+}
+
+.macros-container.closed {
+  @include mediumScreen {
+    display: none;
+  }
+
+  @include smallScreen {
+    display: none;
+  }
+}
+
+.chatscreen-container {
+  grid-column: span 1;
+  height: auto;
+  overflow-y: auto;
+
+  @include mediumScreen {
+    grid-column: span 1;
+  }
+
+  @include smallScreen {
+    grid-column: span 1;
+  }
+}
+
+.inputfield-container {
+  grid-row: span 1;
+
+  @include mediumScreen {
+    grid-column: span 1;
+    grid-row: unset;
+  }
+
+  @include smallScreen {
+    grid-column: span 1;
+    grid-row: unset;
+  }
+}
+
+.maincard-container-inputfield-children {
+  height: 100%;
+}
+
+.text-card-macros-children {
+  &:hover {
+    border: 3px solid $color-orange;
+  }
+  cursor: grab;
+  margin-bottom: 0.5rem;
+
+  @include mediumScreen {
+    margin: 0.5rem;
+    height: 7rem;
+    min-width: 17rem;
+    background-color: $color-light-grey !important;
+  }
+
+  @include smallScreen {
+    margin: 0.5rem;
+    height: 7rem;
+    min-width: 17rem;
+    background-color: $color-light-grey !important;
+  }
+}
+
+.css-ghsjzk-MuiInputBase-root-MuiInput-root:after {
+  border-bottom: 2px solid $color-orange !important;
+}
+
+.css-1d9ye53-MuiTypography-root {
+  font-size: 16px !important;
+}
+
+.dropdown-icon {
+  transform: rotateZ(-90deg);
+  color: $color-grey;
+  font-size: medium;
+}
+
+.maincard-container-macros-children {
+  height: 100%;
+  width: 100%;
+
+  @include mediumScreen {
+    width: 98vw !important;
+    padding-right: 1.5rem;
+    background-color: $color-white !important;
+  }
+
+  @include smallScreen {
+    width: 97vw !important;
+    padding-right: 1.5rem;
+    background-color: $color-white !important;
+  }
+}
+
+.maincard-container-macros-children.open {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+
+  @include mediumScreen {
+    height: 100%;
+    padding-right: 1.5rem;
+  }
+
+  @include smallScreen {
+    height: 100%;
+    padding-right: 1.5rem;
+  }
+}
+
+.maincard-container-input-children {
+  height: 75vh;
+  width: 100%;
+}
+
+.maincard-container-chatscreen-children {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto !important;
+
+  @include mediumScreen {
+    height: 100%;
+  }
+
+  @include smallScreen {
+    height: 100%;
+  }
+}
+
+.maincard-content-macros-children {
+  overflow: hidden;
+  transform: translateY(150%);
+  transition: transform 0.3s ease-out;
+}
+
+.maincard-content-macros-children.open {
+  overflow: auto;
+  transform: translateY(0);
+
+  @include mediumScreen {
+    overflow: auto;
+    padding-bottom: 0.2rem !important;
+  }
+
+  @include smallScreen {
+    overflow: auto;
+    padding-bottom: 0.2rem !important;
+  }
+}
+
+.maincard-typography-container {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#title-typography {
+  font-weight: bolder;
+}
+
+.maincard-icon-container-chatscreen-children {
+  cursor: pointer;
+}
+
+.maincard-icon-container-macros-children {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+
+.maincard-icon-container-macros-children.open {
+  transform: none;
+}
+
+.macros-children {
+  @include mediumScreen {
+    display: flex;
+    display: -webkit-flex;
+  }
+
+  @include smallScreen {
+    display: flex;
+    display: -webkit-flex;
+  }
+}
+
+.textfield-container {
+  margin: 0.5rem 0;
+  display: flex;
+}
+
+.icons-and-button-container {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  margin: 1.3rem 0;
+}
+
+.icons-container {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+}
+
+.add-icon-container {
+  border-radius: 50%;
+  background-color: $color-orange !important;
+  margin-right: 80%;
+  cursor: pointer;
+
+  @include smallScreen {
+    margin-right: 30%;
+  }
+}
+
+.add-icon {
+  color: $color-white;
+  display: flex !important;
+  display: -webkit-flex !important;
+  align-items: center;
+}
+
+.attach-file-icon {
+  transform: rotateZ(30deg);
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.ref-input {
+  display: none;
+}
+
+.emoji-emotions-icon {
+  cursor: pointer;
+}
+
+#resolve-button,
+#login-button {
+  background-color: $color-orange;
+  text-transform: capitalize;
+}
+
+.snackbar-message-container {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+}
+
+.snackbar-message {
+  margin-right: 1rem;
+}
+
+#typography-popover {
+  cursor: pointer;
+}
+
+#login-box {
+  display: grid !important;
+  grid-template-rows: 1fr;
+  gap: 1rem;
+}
+
+#login-button {
+  display: block;
+}
+
+.MuiFormLabel-root.Mui-focused {
+  color: $color-orange !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: $color-orange !important;
+}
+
+.chatscreen-children {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.text-card-user-chatscreen-children {
+  justify-self: flex-end;
+}
+
+.text-card-other-chatscreen-children {
+  justify-self: flex-start;
+}
+
+.chatscreen-cards.css-46bh2p-MuiCardContent-root {
+  padding: 0.5rem !important;
+}
+
+.maincard-content-chatscreen-children {
+  overflow: auto;
+}
+
+.text-card-user-chatscreen-children.chatscreen-cards,
+.text-card-other-chatscreen-children.chatscreen-cards {
+  max-width: 90%;
+}
+
+.each-username.user-chatscreen-children {
+  justify-self: flex-end;
+}
+
+.each-username.other-chatscreen-children {
+  justify-self: flex-start;
+}
+
+.each-username.user-chatscreen-children.chatscreen-cards,
+.each-username.other-chatscreen-children.chatscreen-cards {
+  font-weight: bold;
+}
