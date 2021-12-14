@@ -60,16 +60,22 @@ Start writing and sending messages. Click on the enter button on your keyboard t
 
 ### 3.3
 
+Multiple users can chat on different browser instances and it will be displayed in the chat box.
+
+![chat_multiple_users](https://user-images.githubusercontent.com/60344294/145979070-004f52eb-8b6a-4db4-9e1b-97ae4ea8cd60.PNG)
+
+### 3.4
+
 Characters are validated against these characters `aA-zZ1234567890-=.,`
 
 ![validation](https://user-images.githubusercontent.com/60344294/145956518-b1bd9b5c-2bb9-49a9-b46f-fcaec43cb23e.PNG)
 
-### 3.4
+### 3.5
 
 Select specific macros
 ![select-macros](https://user-images.githubusercontent.com/60344294/145956516-d39c8ef3-e511-4359-bdc3-2d76c46dc44a.PNG)
 
-### 3.5
+### 3.6
 
 Click resolve
 ![click-resolve](https://user-images.githubusercontent.com/60344294/145956509-a96e7661-5b9c-4f4e-a393-8bc72469f3b4.PNG)
