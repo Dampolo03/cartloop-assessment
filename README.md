@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# Getting Started with the Cartloop Assessment App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple SPA with React that simulates a text message conversation between two or more people.
 
-## Available Scripts
+## First Step
 
-In the project directory, you can run:
+Clone the repo:
 
-### `npm start`
+### `git clone https://github.com/Dampolo03/cartloop-assessment.git`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Second Step
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+In the project directory, run the following commands:
+
+### 2.1
+
+To install all dependencies:
+
+### `npm i`
+
+### 2.2
+
+To run the app in the development mode. This simultaneously runs the application in localhost port `3000` and also runs a local mock websocket server in port `8000`:
+
+### `npm run dev`
+
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser after compilation.
+
+### 2.3
+
+To launch the test runner in the interactive watch mode.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 2.4
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
+To build the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `npm run build`
 
-### `npm run eject`
+## Third Step
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Testing and working with the project flow:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 3.1
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Login to the app with a username
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![login](https://user-images.githubusercontent.com/60344294/145956512-8a95a20d-ee7e-42f7-ac92-7d0412f121c0.PNG)
 
-## Learn More
+### 3.2
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Start writing and sending messages. Click on the enter button on your keyboard to send messages.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![write-message](https://user-images.githubusercontent.com/60344294/145956520-4a54c940-1e99-4352-a3f4-a4ec71984f1f.PNG)
 
-### Code Splitting
+### 3.3
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Multiple users can chat on different browser instances and it will be displayed in the chat box.
 
-### Analyzing the Bundle Size
+![chat_multiple_users](https://user-images.githubusercontent.com/60344294/145979070-004f52eb-8b6a-4db4-9e1b-97ae4ea8cd60.PNG)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 3.4
 
-### Making a Progressive Web App
+Characters are validated against these characters `aA-zZ1234567890-=.,`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![validation](https://user-images.githubusercontent.com/60344294/145956518-b1bd9b5c-2bb9-49a9-b46f-fcaec43cb23e.PNG)
 
-### Advanced Configuration
+### 3.5
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Select specific macros
+![select-macros](https://user-images.githubusercontent.com/60344294/145956516-d39c8ef3-e511-4359-bdc3-2d76c46dc44a.PNG)
 
-### Deployment
+### 3.6
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Click resolve
+![click-resolve](https://user-images.githubusercontent.com/60344294/145956509-a96e7661-5b9c-4f4e-a393-8bc72469f3b4.PNG)
