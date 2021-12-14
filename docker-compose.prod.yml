@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  cartloop-assessment:
+    container_name: cartloop-assessment
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    ports:
+      - "3000:80"
