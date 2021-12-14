@@ -54,7 +54,7 @@ Login to the app with a username
 
 ### 3.2
 
-Start writing and sending messages
+Start writing and sending messages. Click on the enter button on your keyboard to send messages.
 
 ![write-message](https://user-images.githubusercontent.com/60344294/145956520-4a54c940-1e99-4352-a3f4-a4ec71984f1f.PNG)
 
