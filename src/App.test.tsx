@@ -1,8 +1,11 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import App from "./App";
+import { render, screen } from "@testing-library/react";
 
-test('renders learn react link', () => {
+jest.mock("websocket");
+
+test("renders <App/>", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  const welcomeText = screen.getByText("Hi! Welcome to Cartloop.");
+  expect(welcomeText).toBeInTheDocument();
 });
