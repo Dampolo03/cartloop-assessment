@@ -4,7 +4,6 @@ const http = require("http");
 
 const server = http.createServer();
 server.listen(webServerPort);
-console.log("listening on port 8000");
 
 const socketServer = new webSocketServer({
   httpServer: server,
